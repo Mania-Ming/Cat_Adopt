@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [error, setError] = useState("");
+  const router = useRouter();
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -18,6 +20,9 @@ export default function Home() {
     }
 
     console.log("Login:", username, password);
+
+    // redirect to dashboard
+    router.push("/dashboard");
   };
 
   return (
@@ -33,10 +38,10 @@ export default function Home() {
 
         <form onSubmit={handleSubmit}>
           <label>Username</label>
-          <input type="text" name="username" placeholder="" />
+          <input type="text" name="username" />
 
           <label>Password</label>
-          <input type="password" name="password" placeholder="" />
+          <input type="password" name="password" />
 
           <p className="signup-text">
             No Account yet?{" "}
