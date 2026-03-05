@@ -6,23 +6,24 @@ import Link from "next/link";
 export default function Home() {
   const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
 
-    const email = (e.target as HTMLFormElement).email.value;
-    const password = (e.target as HTMLFormElement).password.value;
+    const username = e.target.username.value;
+    const password = e.target.password.value;
 
-    if (!email || !password) {
-      setError("Please enter email and password");
+    if (!username || !password) {
+      setError("Please enter username and password");
       return;
     }
 
-    console.log("Login:", email, password);
+    console.log("Login:", username, password);
   };
 
   return (
     <div className="login-container">
       <div className="login-card">
+
         <div className="logo">🐾</div>
 
         <h2>Cat Adoption</h2>
@@ -31,18 +32,20 @@ export default function Home() {
         {error && <p className="error">{error}</p>}
 
         <form onSubmit={handleSubmit}>
-          <label>Email</label>
-          <input type="email" name="email" required />
+          <label>Username</label>
+          <input type="text" name="username" placeholder="" />
 
           <label>Password</label>
-          <input type="password" name="password" required />
+          <input type="password" name="password" placeholder="" />
 
           <p className="signup-text">
-            No account yet? <Link href="/register">Click here to Register</Link>
+            No Account yet?{" "}
+            <Link href="/register">Click here to Register</Link>
           </p>
 
           <button type="submit">Login</button>
         </form>
+
       </div>
     </div>
   );
