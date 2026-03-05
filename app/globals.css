@@ -59,6 +59,7 @@ input{
 .signup-text{
     font-size:12px;
     margin:15px 0;
+    text-align:center;
 }
 
 .signup-text a{
@@ -76,6 +77,7 @@ button{
     color:white;
     font-weight:bold;
     cursor:pointer;
+    margin-top:20px;
 }
 
 button:hover{
@@ -97,4 +99,210 @@ button:hover{
     color:#ff6a3d;
     font-weight:bold;
     text-decoration:none;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+    position:fixed;
+    left:-230px;
+    top:0;
+    width:230px;
+    height:100%;
+    background:#ffffff;
+    box-shadow:2px 0 10px rgba(0,0,0,0.1);
+    padding:20px;
+    transition:0.3s;
+}
+
+.sidebar.active{
+    left:0;
+}
+
+.sidebar h2{
+    text-align:center;
+    margin-bottom:5px;
+}
+
+.panel-text{
+    text-align:center;
+    color:#777;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.sidebar a{
+    display:block;
+    padding:12px;
+    margin:8px 0;
+    text-decoration:none;
+    color:#333;
+    border-radius:8px;
+}
+
+.sidebar a:hover{
+    background:#f3f3f3;
+}
+
+.sidebar .active{
+    background:#e67c52;
+    color:white;
+}
+
+/* ================= HAMBURGER ================= */
+
+.hamburger{
+    position:fixed;
+    top:15px;
+    left:15px;
+    font-size:22px;
+    border:none;
+    background:#e67c52;
+    color:white;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* ================= MAIN CONTENT ================= */
+
+.main-content{
+    margin-left:0;
+    padding:30px;
+    transition:0.3s;
+}
+
+.main-content.shift{
+    margin-left:230px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+/* ================= SEARCH ================= */
+
+.top-bar{
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:20px;
+}
+
+.search-section input{
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    margin-right:10px;
+}
+
+.search-section select{
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+/* ================= TITLE ================= */
+
+.sub-text{
+    color:#777;
+    margin-bottom:25px;
+}
+
+/* ================= CAT GRID ================= */
+
+.cats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:20px;
+}
+
+/* ================= CAT CARD ================= */
+
+.cat-card{
+    background:white;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    overflow:hidden;
+    text-align:center;
+}
+
+.cat-image{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.cat-info{
+    padding:15px;
+}
+
+.adopt-btn{
+    background:#e67c52;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    color:white;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.adopt-btn:hover{
+    background:#d96c43;
+}
+
+/* ================= MODAL ================= */
+
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content{
+    background:white;
+    padding:30px;
+    width:350px;
+    border-radius:15px;
+}
+
+.close-btn{
+    float:right;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.modal input{
+    width:100%;
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    margin-bottom:10px;
+}
+
+.modal-buttons{
+    display:flex;
+    justify-content:space-between;
+}
+
+.cancel-btn{
+    background:#aaa;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    color:white;
+}
+
+.submit-btn{
+    background:#e67c52;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    color:white;
 }
