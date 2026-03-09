@@ -140,11 +140,11 @@ button:hover{
           margin-bottom:25px;
         }
 
-        .cats-grid{
-          display:grid;
-          grid-template-columns:repeat(4,1fr);
-          gap:25px;
-        }
+       .cats-grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+        gap:25px;
+      }
 
         .cat-card{
           background:white;
@@ -157,6 +157,8 @@ button:hover{
           width:100%;
           height:200px;
           object-fit:cover;
+          border-top-left-radius:10px;
+          border-top-right-radius:10px;
         }
 
         .cat-info{
